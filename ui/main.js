@@ -8,5 +8,6 @@ element.innerHTML = 'New value';
 //move the image
 var img = document.getElementById('hi');
 img.onClick = function () {
-    img.style.marginleft = '100px';
+    var interval = setInterval (moveright, 100);
+ 
 };
