@@ -6,7 +6,7 @@ var element = document.getElementById('main-text');
 element.innerHTML = 'New value';
 
 //move the image
-var img = document.getElementById('kek');
+var img = document.getElementById('hi');
 img.onClick = function () {
     img.style.marginleft = '100px';
 };
