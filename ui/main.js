@@ -6,11 +6,11 @@ var element = document.getElementById('main-text');
 element.innerHTML = 'New value';
 
 //move the image
-var img = document.getElementById('hi');
+var img = document.getElementById('madi');
 var martinLeft = 0;
 function moveRight (){
     marginLeft = marginLeft + 10;
-    img,style.marginLeft = marginLeft + 'px';
+    img.style.marginLeft = marginLeft + 'px';
 }
 img.onClick = function () {
     var interval = setInterval (moveRight, 100);
