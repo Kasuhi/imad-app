@@ -8,5 +8,5 @@ element.innerHTML = 'New value';
 //move the image
 var img = document.getElementById('madi');
 img.onclick = function () {
-    var interval = setInterval(moveleft, 100);
+    var interval = setInterval(moveLeft, 100);
 };
