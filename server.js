@@ -76,6 +76,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var names = [];
 app.get('/submit-name', function(req, res){ //URL : /submit-name?name=xxxx
     //Get the name from the request
     var name = req.query.name;
@@ -113,10 +114,6 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/hl.ico', function (req, res){
     res.sendfile(path.join(__dirname, 'ui', 'hl.ico'));
 });
-var names = [];
-
-
-
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
