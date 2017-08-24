@@ -105,9 +105,9 @@ app.get('/ui/hl.ico', function (req, res){
     res.sendfile(path.join(__dirname, 'ui', 'hl.ico'));
 });
 var names = [];
-app.get('/submit-name/:name', function(req, res){
+app.get('/submit-name', function(req, res){ //URL : /submit-name?name=xxxx
     //Get the name from the request
-    var name = req.params.name;
+    var name = req.query.name;
     
     names.push(name);
     //JsonL Javascript Object Notation
