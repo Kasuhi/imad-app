@@ -82,6 +82,15 @@ app.get('/counter', function (req, res){
     res.send(counter.toString());
 });
 
+app.get('/submit-name', function(req, res){ //URL : /submit-name?name=xxxx
+    //Get the name from the request
+    var name = req.query.name;
+    
+    names.push(name);
+    //JsonL Javascript Object Notation
+    res.send(JSON.stringify(names));
+});
+
 app.get('/:articleName', function(req, res){
     //articleName == article-one
     //articles[articleName] == {} content object for article one
@@ -105,14 +114,7 @@ app.get('/ui/hl.ico', function (req, res){
     res.sendfile(path.join(__dirname, 'ui', 'hl.ico'));
 });
 var names = [];
-app.get('/submit-name', function(req, res){ //URL : /submit-name?name=xxxx
-    //Get the name from the request
-    var name = req.query.name;
-    
-    names.push(name);
-    //JsonL Javascript Object Notation
-    res.send(JSON.stringify(names));
-});
+
 
 
 
